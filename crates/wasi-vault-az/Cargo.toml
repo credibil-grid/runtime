@@ -1,0 +1,33 @@
+[package]
+name = "wasi-vault-az"
+description = "WASI Vault WIT implementation using Azure Key Vault"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[lints]
+workspace = true
+
+[features]
+
+[dependencies]
+anyhow.workspace = true
+azure_security_keyvault_secrets.workspace = true
+base64ct.workspace = true
+futures.workspace = true
+http.workspace = true
+runtime.workspace = true
+tracing.workspace = true
+wasmtime.workspace = true
+wasmtime-wasi.workspace = true
+
+# required for azure_identity, etc.
+openssl = { version = "0.10", features = ["vendored"] }
+
+[package.metadata.cargo-machete]
+ignored = ["openssl"]

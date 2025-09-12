@@ -1,0 +1,45 @@
+
+[package]
+name = "cg-run"
+description = "Wasm runtime"
+authors = ["Credibil"]
+edition = "2024"
+homepage = "https://credibil.io"
+keywords = ["decentralized", "identity"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/credibil-grid/runtime"
+rust-version = "1.89"
+version = "0.1.0"
+
+[features]
+default = ["compile"]
+compile = ["runtime/compile"]
+
+[lints.rust]
+trivial_numeric_casts = "warn"
+unused_extern_crates = "warn"
+
+[lints.clippy]
+all = "warn"
+nursery = "warn"
+pedantic = "warn"
+
+[dependencies]
+anyhow = "1.0.99"
+res-azkeyvault = { git = "https://github.com/credibil/tempo" }
+res-mongodb = { git = "https://github.com/credibil/tempo" }
+res-nats = { git = "https://github.com/credibil/tempo" }
+runtime = { git = "https://github.com/credibil/tempo" }
+tokio = { version = "1.47.1", default-features = false }
+wasi-blobstore-mdb = { git = "https://github.com/credibil/tempo" }
+wasi-http = { git = "https://github.com/credibil/tempo" }
+wasi-keyvalue-nats = { git = "https://github.com/credibil/tempo" }
+wasi-messaging-nats = { git = "https://github.com/credibil/tempo" }
+wasi-otel = { git = "https://github.com/credibil/tempo" }
+wasi-vault-az = { git = "https://github.com/credibil/tempo" }
+
+[profile.release]
+lto = true
+opt-level = "s"
+strip = true
