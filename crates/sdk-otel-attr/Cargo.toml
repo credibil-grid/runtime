@@ -1,0 +1,22 @@
+[package]
+name = "sdk-otel-attr"
+description = "Openteleemetry attribute macros for WASI components"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[lib]
+proc-macro = true
+
+[lints]
+workspace = true
+
+[dependencies]
+quote = "1.0.40"
+syn = { version = "2.0.106", features = ["parsing"] }
+tracing.workspace = true

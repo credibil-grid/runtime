@@ -1,0 +1,27 @@
+[package]
+name = "wasi-http"
+description = "Wasm http WIT implementation using wasmtime-wasi-http"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
+
+[lints]
+workspace = true
+
+[features]
+
+[dependencies]
+anyhow.workspace = true
+futures.workspace = true
+http.workspace = true
+hyper = "1.7.0"
+runtime.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+wasmtime.workspace = true
+wasmtime-wasi-http.workspace = true

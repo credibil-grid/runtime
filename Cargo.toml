@@ -1,0 +1,45 @@
+
+[package]
+name = "cg-run"
+description = "Wasm runtime"
+authors = ["Credibil"]
+edition = "2024"
+homepage = "https://credibil.io"
+keywords = ["wasm", "runtime"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/credibil-grid/runtime"
+rust-version = "1.89"
+version = "0.1.0"
+
+[features]
+default = ["compile"]
+compile = ["runtime/compile"]
+
+[lints.rust]
+trivial_numeric_casts = "warn"
+unused_extern_crates = "warn"
+
+[lints.clippy]
+all = "warn"
+nursery = "warn"
+pedantic = "warn"
+
+[dependencies]
+anyhow = "1.0.99"
+res-azkeyvault = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+res-mongodb = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+res-nats = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+runtime = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+tokio = { version = "1.47.1", default-features = false }
+wasi-blobstore-mdb = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-http = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-keyvalue-nats = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-messaging-nats = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-otel = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-vault-az = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+
+[profile.release]
+lto = true
+opt-level = "s"
+strip = true
