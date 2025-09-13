@@ -12,16 +12,17 @@ use wasi_messaging_nats::Messaging;
 use wasi_otel::Otel;
 use wasi_vault_az::Vault;
 
+
 #[tokio::main]
 async fn main() -> Result<()> {
     match Cli::parse().command {
-        Command::Run { wasm } => init_runtime(wasm).await,
+        Command::Run { wasm } => init(wasm).await,
         #[cfg(feature = "compile")]
         Command::Compile { wasm, output } => runtime::compile(&wasm, output),
     }
 }
 
-async fn init_runtime(wasm: PathBuf) -> Result<()> {
+async fn init(wasm: PathBuf) -> Result<()> {
     // create resources (in parallel)
     let (mongodb, az_secret, nats) = tokio::join!(MongoDb::new(), AzKeyVault::new(), Nats::new());
     let nats = nats?;
