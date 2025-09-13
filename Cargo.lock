@@ -2748,7 +2748,7 @@ dependencies = [
 [[package]]
 name = "res-azkeyvault"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "azure_core",
@@ -2761,7 +2761,7 @@ dependencies = [
 [[package]]
 name = "res-mongodb"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "mongodb",
@@ -2772,7 +2772,7 @@ dependencies = [
 [[package]]
 name = "res-nats"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "async-nats",
@@ -2804,7 +2804,7 @@ dependencies = [
 [[package]]
 name = "runtime"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "cfg-if",
@@ -4019,7 +4019,7 @@ dependencies = [
 [[package]]
 name = "wasi-blobstore-mdb"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "bytes",
@@ -4037,7 +4037,7 @@ dependencies = [
 [[package]]
 name = "wasi-http"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "futures",
@@ -4053,7 +4053,7 @@ dependencies = [
 [[package]]
 name = "wasi-keyvalue-nats"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "async-nats",
@@ -4068,7 +4068,7 @@ dependencies = [
 [[package]]
 name = "wasi-messaging-nats"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "async-nats",
@@ -4084,7 +4084,7 @@ dependencies = [
 [[package]]
 name = "wasi-otel"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "credibil-otel",
@@ -4106,7 +4106,7 @@ dependencies = [
 [[package]]
 name = "wasi-vault-az"
 version = "0.1.0"
-source = "git+https://github.com/credibil/tempo#f1a0f6b00f9c6fae755dd1b003f95753469198d2"
+source = "git+https://github.com/credibil/tempo#808bec8c2af1952a321bd1d81379a5aea33040dc"
 dependencies = [
  "anyhow",
  "azure_security_keyvault_secrets",
