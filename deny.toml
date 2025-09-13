@@ -42,7 +42,7 @@ deny = [
   { name = "tokio", deny-multiple-versions = true },
 ]
 skip = [
-  { crate = "wit-bindgen", reason = "duplicate versions" },
+  # { crate = "wit-bindgen", reason = "duplicate versions" },
 ]
 skip-tree = [
   { crate = "async-nats", depth = 5, reason = "contains out of date versions" },
@@ -54,3 +54,10 @@ skip-tree = [
 duplicates = "deny"
 include-path-dependencies = true
 unused = "deny"
+
+[sources]
+
+[sources.allow-org]
+github = [
+    "credibil",
+]
