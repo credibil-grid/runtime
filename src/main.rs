@@ -12,7 +12,6 @@ use wasi_messaging_nats::Messaging;
 use wasi_otel::Otel;
 use wasi_vault_az::Vault;
 
-
 #[tokio::main]
 async fn main() -> Result<()> {
     match Cli::parse().command {
