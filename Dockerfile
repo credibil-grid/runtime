@@ -12,9 +12,8 @@ RUN \
     --mount=type=bind,src=Cargo.toml,dst=Cargo.toml \
     --mount=type=bind,src=Cargo.lock,dst=Cargo.lock \
     --mount=type=bind,src=src,dst=src \
-    --mount=type=bind,source=wit,target=wit \
-    --mount=type=bind,source=crates,target=crates \
-    --mount=type=bind,source=examples,target=examples \
+    # --mount=type=bind,source=wit,target=wit \
+    # --mount=type=bind,source=crates,target=crates \
     # --mount=type=cache,target=$CARGO_HOME/git/db \
     # --mount=type=cache,target=$CARGO_HOME/registry \
     cargo build --package $PACKAGE --release
