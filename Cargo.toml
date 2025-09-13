@@ -5,7 +5,7 @@ description = "Wasm runtime"
 authors = ["Credibil"]
 edition = "2024"
 homepage = "https://credibil.io"
-keywords = ["decentralized", "identity"]
+keywords = ["wasm", "runtime"]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/credibil-grid/runtime"
@@ -27,17 +27,17 @@ pedantic = "warn"
 
 [dependencies]
 anyhow = "1.0.99"
-res-azkeyvault = { git = "https://github.com/credibil/tempo" }
-res-mongodb = { git = "https://github.com/credibil/tempo" }
-res-nats = { git = "https://github.com/credibil/tempo" }
-runtime = { git = "https://github.com/credibil/tempo" }
+res-azkeyvault = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+res-mongodb = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+res-nats = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+runtime = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
 tokio = { version = "1.47.1", default-features = false }
-wasi-blobstore-mdb = { git = "https://github.com/credibil/tempo" }
-wasi-http = { git = "https://github.com/credibil/tempo" }
-wasi-keyvalue-nats = { git = "https://github.com/credibil/tempo" }
-wasi-messaging-nats = { git = "https://github.com/credibil/tempo" }
-wasi-otel = { git = "https://github.com/credibil/tempo" }
-wasi-vault-az = { git = "https://github.com/credibil/tempo" }
+wasi-blobstore-mdb = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-http = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-keyvalue-nats = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-messaging-nats = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-otel = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
+wasi-vault-az = { git = "https://github.com/credibil/tempo", tag = "v0.1.0" }
 
 [profile.release]
 lto = true
