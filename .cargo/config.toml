@@ -1,5 +1,0 @@
-[net]
-git-fetch-with-cli = true
-
-[registries]
-credibil = { index = "https://github.com/credibil/tempo" }
