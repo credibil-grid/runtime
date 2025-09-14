@@ -5,7 +5,7 @@ on:
     inputs:
       binary: 
         description: 'Binary to publish'
-        default: 'wasm-cli'
+        default: 'standard'
 
 jobs:
   # publish:
@@ -41,6 +41,19 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
+        if: $${{ inputs.binary == 'standard' }}
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          platforms: linux/amd64,linux/arm64
+          build-args: |
+            BINARY=${{ inputs.binary }}
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ needs.publish.outputs.version }}
+            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
+
+      - name: Build and push image
+        if: $${{ inputs.binary != 'standard' }}
         uses: docker/build-push-action@v6
         with:
           push: true
