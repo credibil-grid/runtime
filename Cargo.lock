@@ -484,24 +484,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2fd1289c04a9ea8cb22300a459a72a385d7c73d3259e2ed7dcb2af674838cfa9"
 
 [[package]]
-name = "cg-run"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "res-azkeyvault",
- "res-mongodb",
- "res-nats",
- "runtime",
- "tokio",
- "wasi-blobstore-mdb",
- "wasi-http",
- "wasi-keyvalue-nats",
- "wasi-messaging-nats",
- "wasi-otel",
- "wasi-vault-az",
-]
-
-[[package]]
 name = "chrono"
 version = "0.4.42"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4202,6 +4184,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "wasm-cli"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "res-azkeyvault",
+ "res-mongodb",
+ "res-nats",
+ "runtime",
+ "tokio",
+ "wasi-blobstore-mdb",
+ "wasi-http",
+ "wasi-keyvalue-nats",
+ "wasi-messaging-nats",
+ "wasi-otel",
+ "wasi-vault-az",
+]
+
+[[package]]
 name = "wasm-encoder"
 version = "0.236.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4438,7 +4438,6 @@ checksum = "2aaacc0fea00293f7af7e6c25cef74b7d213ebbe7560c86305eec15fc318fab8"
 dependencies = [
  "anyhow",
  "cfg-if",
- "cranelift-codegen",
  "log",
  "object 0.37.3",
 ]

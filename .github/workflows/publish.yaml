@@ -2,6 +2,10 @@ name: Publish Release
 
 on:
   workflow_dispatch:
+    inputs:
+      binary: 
+        description: 'Binary to publish'
+        default: 'wasm-cli'
 
 jobs:
   # publish:
@@ -42,7 +46,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           build-args: |
-            PACKAGE=cg-run
+            BINARY=${{ inputs.binary }}
           tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ needs.publish.outputs.version }}
-            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
+            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ inputs.binary }}-${{ needs.publish.outputs.version }}
+            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ inputs.binary }}-latest

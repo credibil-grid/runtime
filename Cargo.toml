@@ -1,6 +1,6 @@
 
 [package]
-name = "cg-run"
+name = "wasm-cli"
 description = "Wasm runtime"
 authors = ["Credibil"]
 edition = "2024"
@@ -11,10 +11,15 @@ readme = "README.md"
 repository = "https://github.com/credibil-grid/runtime"
 rust-version = "1.89"
 version = "0.1.0"
+default-run = "standard"
 
-[features]
-default = ["compile"]
-compile = ["runtime/compile"]
+[[bin]]
+name = "standard"
+path = "src/standard.rs"
+
+[[bin]]
+name = "minimal"
+path = "src/minimal.rs"
 
 [lints.rust]
 trivial_numeric_casts = "warn"
