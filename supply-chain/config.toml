@@ -27,7 +27,7 @@ version = "0.24.2"
 criteria = "safe-to-deploy"
 
 [[exemptions.addr2line]]
-version = "0.25.0"
+version = "0.25.1"
 criteria = "safe-to-deploy"
 
 [[exemptions.ahash]]
@@ -255,7 +255,7 @@ version = "0.3.3"
 criteria = "safe-to-deploy"
 
 [[exemptions.gimli]]
-version = "0.32.2"
+version = "0.32.3"
 criteria = "safe-to-deploy"
 
 [[exemptions.hickory-proto]]
@@ -483,7 +483,7 @@ version = "0.5.17"
 criteria = "safe-to-deploy"
 
 [[exemptions.resolv-conf]]
-version = "0.7.4"
+version = "0.7.5"
 criteria = "safe-to-deploy"
 
 [[exemptions.rfc6979]]
@@ -527,7 +527,7 @@ version = "0.102.8"
 criteria = "safe-to-deploy"
 
 [[exemptions.rustls-webpki]]
-version = "0.103.5"
+version = "0.103.6"
 criteria = "safe-to-deploy"
 
 [[exemptions.schannel]]
@@ -556,6 +556,10 @@ criteria = "safe-to-deploy"
 
 [[exemptions.security-framework-sys]]
 version = "2.15.0"
+criteria = "safe-to-deploy"
+
+[[exemptions.semver]]
+version = "1.0.27"
 criteria = "safe-to-deploy"
 
 [[exemptions.serde_nanos]]
