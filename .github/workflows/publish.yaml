@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       binary: 
-        description: 'Binary to publish'
-        default: 'standard'
+        description: Binary to publish
+        default: standard
 
 jobs:
   ci:
