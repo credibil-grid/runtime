@@ -2,16 +2,16 @@
 [package]
 name = "wasm-cli"
 description = "Wasm runtime"
-authors = ["Credibil"]
-edition = "2024"
-homepage = "https://credibil.io"
-keywords = ["wasm", "runtime"]
-license = "MIT OR Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/credibil-grid/runtime"
-rust-version = "1.89"
-version = "0.2.0"
 default-run = "standard"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [[bin]]
 name = "standard"
@@ -38,11 +38,11 @@ res-nats.workspace = true
 runtime.workspace = true
 tokio.workspace = true
 wasi-blobstore-mdb.workspace = true
+wasi-http.workspace = true
 wasi-keyvalue-nats.workspace = true
 wasi-messaging-nats.workspace = true
-wasi-vault-az.workspace = true
-wasi-http.workspace = true
 wasi-otel.workspace = true
+wasi-vault-az.workspace = true
 
 [profile.release]
 lto = true
