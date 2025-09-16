@@ -1,5 +1,5 @@
 [package]
-name = "http"
+name = "http-ex"
 version = "0.1.0"
 authors.workspace = true
 edition.workspace = true
@@ -12,7 +12,7 @@ crate-type = ["cdylib"]
 workspace = true
 
 [dependencies]
-axum = { version = "0.8.4", features = ["json"] }
+axum = { version = "0.8.4", default-features = false, features = ["json"] }
 sdk-http = { git = "https://github.com/credibil/tempo", tag = "v0.2.0" }
 serde_json.workspace = true
 tracing.workspace = true
