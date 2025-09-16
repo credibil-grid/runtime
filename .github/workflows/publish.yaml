@@ -3,8 +3,8 @@ name: Publish Release
 on:
   workflow_dispatch:
     inputs:
-      binary: 
-        description: Binary to publish
+      bin: 
+        description: Binary (--bin target) to publish
         default: standard
 
 jobs:
@@ -37,25 +37,25 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
-        if: $${{ inputs.binary == 'standard' }}
+        if: $${{ inputs.bin == 'standard' }}
         uses: docker/build-push-action@v6
         with:
           push: true
           platforms: linux/amd64,linux/arm64
           build-args: |
-            BINARY=${{ inputs.binary }}
+            BIN=${{ inputs.bin }}
           tags: |
             ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ needs.publish.outputs.version }}
             ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
 
       - name: Build and push image
-        if: $${{ inputs.binary != 'standard' }}
+        if: $${{ inputs.bin != 'standard' }}
         uses: docker/build-push-action@v6
         with:
           push: true
           platforms: linux/amd64,linux/arm64
           build-args: |
-            BINARY=${{ inputs.binary }}
+            BIN=${{ inputs.bin }}
           tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ inputs.binary }}-${{ needs.publish.outputs.version }}
-            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ inputs.binary }}-latest
+            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ inputs.bin }}-${{ needs.publish.outputs.version }}
+            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ inputs.bin }}-latest
