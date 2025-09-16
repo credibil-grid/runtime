@@ -8,13 +8,13 @@ on:
         default: standard
 
 jobs:
-  # ci:
-  #   name: CI
-  #   uses: credibil/pipeline/.github/workflows/ci.yaml@main
+  ci:
+    name: CI
+    uses: credibil/pipeline/.github/workflows/ci.yaml@main
 
   publish:
     name: Publish
-    # needs: ci
+    needs: ci
     uses: credibil/pipeline/.github/workflows/publish.yaml@main
 
   package:
