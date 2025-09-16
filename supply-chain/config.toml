@@ -50,6 +50,14 @@ criteria = "safe-to-deploy"
 version = "1.1.2"
 criteria = "safe-to-deploy"
 
+[[exemptions.axum]]
+version = "0.8.4"
+criteria = "safe-to-deploy"
+
+[[exemptions.axum-core]]
+version = "0.5.2"
+criteria = "safe-to-deploy"
+
 [[exemptions.azure_core]]
 version = "0.27.0"
 criteria = "safe-to-deploy"
@@ -336,6 +344,10 @@ criteria = "safe-to-deploy"
 
 [[exemptions.matchers]]
 version = "0.2.0"
+criteria = "safe-to-deploy"
+
+[[exemptions.matchit]]
+version = "0.8.4"
 criteria = "safe-to-deploy"
 
 [[exemptions.maybe-owned]]
