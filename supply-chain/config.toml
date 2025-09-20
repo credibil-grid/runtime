@@ -750,20 +750,8 @@ criteria = "safe-to-deploy"
 version = "0.2.103"
 criteria = "safe-to-deploy"
 
-[[exemptions.wasm-encoder]]
-version = "0.236.1"
-criteria = "safe-to-deploy"
-
 [[exemptions.wasm-streams]]
 version = "0.4.2"
-criteria = "safe-to-deploy"
-
-[[exemptions.wasmparser]]
-version = "0.236.1"
-criteria = "safe-to-deploy"
-
-[[exemptions.wasmprinter]]
-version = "0.236.1"
 criteria = "safe-to-deploy"
 
 [[exemptions.web-sys]]
@@ -788,10 +776,6 @@ criteria = "safe-to-deploy"
 
 [[exemptions.winreg]]
 version = "0.50.0"
-criteria = "safe-to-deploy"
-
-[[exemptions.wit-parser]]
-version = "0.236.1"
 criteria = "safe-to-deploy"
 
 [[exemptions.wyz]]
