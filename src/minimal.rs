@@ -1,5 +1,4 @@
 use anyhow::{Result, anyhow};
-
 use res_mongodb::MongoDb;
 use runtime::{AddResource, Cli, Command, Parser, ResourceBuilder, Runtime};
 use wasi_blobstore_mdb::Blobstore;
