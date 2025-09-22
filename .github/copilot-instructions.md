@@ -1,7 +1,7 @@
-# Copilot Instructions for Tempo
+# Copilot Instructions for Runtime
 
 ## Project Overview
-Tempo is a modular WASI component runtime built on [wasmtime](https://github.com/bytecodealliance/wasmtime), designed to run and compose WebAssembly components with host services. It is used by Credibil as a flexible, extensible platform for running WASI-based applications, with a focus on dynamic service inclusion and cloud-native workflows.
+Runtime is a modular WASI component runtime built on [wasmtime](https://github.com/bytecodealliance/wasmtime), designed to run and compose WebAssembly components with host services. It is used by Credibil as a flexible, extensible platform for running WASI-based applications, with a focus on dynamic service inclusion and cloud-native workflows.
 
 ## Architecture & Key Patterns
 - **Crate Structure:**

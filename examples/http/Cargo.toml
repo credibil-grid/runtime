@@ -12,7 +12,7 @@ workspace = true
 
 [dependencies]
 axum = { version = "0.8.4", default-features = false, features = ["json"] }
-sdk-http = { git = "https://github.com/credibil/tempo", tag = "v0.2.0" }
+sdk-http = { git = "https://github.com/credibil/wrt", tag = "v0.5.2" }
 serde_json.workspace = true
 tracing.workspace = true
 tracing-subscriber.workspace = true
