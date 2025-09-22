@@ -1,9 +1,8 @@
 [package]
 name = "http-ex"
-version = "0.1.0"
-authors.workspace = true
+description = "Example wasm guest using wasi:http"
 edition.workspace = true
-license.workspace = true
+publish = false
 
 [lib]
 crate-type = ["cdylib"]
