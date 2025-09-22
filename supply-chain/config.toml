@@ -563,7 +563,7 @@ version = "2.11.1"
 criteria = "safe-to-deploy"
 
 [[exemptions.security-framework]]
-version = "3.4.0"
+version = "3.5.0"
 criteria = "safe-to-deploy"
 
 [[exemptions.security-framework-sys]]
