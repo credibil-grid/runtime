@@ -858,8 +858,9 @@ dependencies = [
 
 [[package]]
 name = "credibil-otel"
-version = "0.0.0"
-source = "git+https://github.com/credibil/core.git?tag=v0.1.0#b27dc201fea251e6270bc88eac04d74006a9a54f"
+version = "0.2.1"
+source = "sparse+https://pkgs.dev.azure.com/credibil/_packaging/credibil/Cargo/index/"
+checksum = "ee394d945adbe289ab8c74d6c43fab984e59074e8dedf12a15a3cf38c19c2674"
 dependencies = [
  "anyhow",
  "http",
@@ -867,8 +868,6 @@ dependencies = [
  "opentelemetry-otlp",
  "opentelemetry_sdk",
  "rand 0.9.2",
- "serde",
- "tokio",
  "tower",
  "tracing",
  "tracing-opentelemetry",
@@ -2963,8 +2962,9 @@ dependencies = [
 
 [[package]]
 name = "runtime"
-version = "0.5.0"
-source = "git+https://github.com/credibil/wrt?tag=v0.5.0#68a4481d78ae13d420859c1905306e132c71c398"
+version = "0.6.0"
+source = "sparse+https://pkgs.dev.azure.com/credibil/_packaging/credibil/Cargo/index/"
+checksum = "cd527429b00c21180b652ec8d174fa38504530c2dbda830f8b1e6b4e28567392"
 dependencies = [
  "anyhow",
  "cfg-if",
@@ -3775,7 +3775,6 @@ dependencies = [
  "io-uring",
  "libc",
  "mio",
- "parking_lot",
  "pin-project-lite",
  "signal-hook-registry",
  "slab",
@@ -4270,8 +4269,9 @@ dependencies = [
 
 [[package]]
 name = "wasi-http"
-version = "0.5.0"
-source = "git+https://github.com/credibil/wrt?tag=v0.5.0#68a4481d78ae13d420859c1905306e132c71c398"
+version = "0.6.0"
+source = "sparse+https://pkgs.dev.azure.com/credibil/_packaging/credibil/Cargo/index/"
+checksum = "8ae1c55a45f31eeb782741e67c0af0c2954c20c2ca099db90147b0e3c2484449"
 dependencies = [
  "anyhow",
  "futures",
@@ -4317,8 +4317,9 @@ dependencies = [
 
 [[package]]
 name = "wasi-otel"
-version = "0.5.0"
-source = "git+https://github.com/credibil/wrt?tag=v0.5.0#68a4481d78ae13d420859c1905306e132c71c398"
+version = "0.6.0"
+source = "sparse+https://pkgs.dev.azure.com/credibil/_packaging/credibil/Cargo/index/"
+checksum = "9ed8228aaba8e85019547431462dd00a88413ea9f7997a34734bdd4d19dba0ae"
 dependencies = [
  "anyhow",
  "credibil-otel",

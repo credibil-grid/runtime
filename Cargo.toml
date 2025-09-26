@@ -135,18 +135,20 @@ wasmtime-wasi = { version = "37.0.0", features = ["p3"] }
 wasmtime-wasi-http = { version = "37.0.0", features = ["p3"] }
 wasmtime-wasi-io = "37.0.0"
 
-credibil-otel = { git = "https://github.com/credibil/core.git", tag = "v0.1.0" }
-runtime = { git = "https://github.com/credibil/wrt", tag = "v0.5.0" }
-wasi-http = { git = "https://github.com/credibil/wrt", tag = "v0.5.0" }
-wasi-otel = { git = "https://github.com/credibil/wrt", tag = "v0.5.0" }
+# credibil registry
+credibil-otel = { version = "0.2.1", registry = "credibil" }
+runtime = { version = "0.6.0", registry = "credibil" }
+wasi-http = { version = "0.6.0", registry = "credibil" }
+wasi-otel = { version = "0.6.0", registry = "credibil" }
 
-res-azkeyvault = { path = "crates/res-azkeyvault" }
-res-mongodb = { path = "crates/res-mongodb" }
-res-nats = { path = "crates/res-nats" }
-wasi-blobstore-mdb = { path = "crates/wasi-blobstore-mdb" }
-wasi-keyvalue-nats = { path = "crates/wasi-keyvalue-nats" }
-wasi-messaging-nats = { path = "crates/wasi-messaging-nats" }
-wasi-vault-az = { path = "crates/wasi-vault-az" }
+# interally referenced crates
+res-azkeyvault = { path = "crates/res-azkeyvault", version = "0.5.0", registry = "credibil" }
+res-mongodb = { path = "crates/res-mongodb", version = "0.5.0", registry = "credibil" }
+res-nats = { path = "crates/res-nats", version = "0.5.0", registry = "credibil" }
+wasi-blobstore-mdb = { path = "crates/wasi-blobstore-mdb", version = "0.5.0", registry = "credibil" }
+wasi-keyvalue-nats = { path = "crates/wasi-keyvalue-nats", version = "0.5.0", registry = "credibil" }
+wasi-messaging-nats = { path = "crates/wasi-messaging-nats", version = "0.5.0", registry = "credibil" }
+wasi-vault-az = { path = "crates/wasi-vault-az", version = "0.5.0", registry = "credibil" }
 
 # [patch."https://github.com/credibil/core.git"]
 # credibil-otel = { path = "../../credibil/core/crates/otel" }
