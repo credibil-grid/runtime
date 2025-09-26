@@ -1,6 +1,6 @@
 # Runtime
 
-Credibil-grid Wasm runtimes, deployed as Docker containers or standalone binaries.
+Credibil-Grid Wasm runtimes, deployed as Docker containers or standalone binaries.
 
 Example runtimes can be used as a starting point for building and deploying WASI-based applications. The examples run in Docker containers but can readily be built and deployed as standalone binaries.
 

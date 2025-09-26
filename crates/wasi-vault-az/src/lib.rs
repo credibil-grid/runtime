@@ -88,7 +88,9 @@ fn azkeyvault() -> anyhow::Result<&'static SecretClient> {
 impl vault::Host for Host<'_> {
     // Open locker specified by identifier, save to state and return as a resource.
     async fn open(&mut self, locker_id: String) -> Result<Resource<Locker>> {
-        let locker = Locker { identifier: locker_id };
+        let locker = Locker {
+            identifier: locker_id,
+        };
         Ok(self.table.push(locker)?)
     }
 
@@ -99,9 +101,7 @@ impl vault::Host for Host<'_> {
 }
 
 impl vault::HostLocker for Host<'_> {
-    async fn get(
-        &mut self, self_: Resource<Locker>, secret_id: String,
-    ) -> Result<Option<Vec<u8>>> {
+    async fn get(&mut self, self_: Resource<Locker>, secret_id: String) -> Result<Option<Vec<u8>>> {
         let Ok(locker) = self.table.get(&self_) else {
             return Err(Error::NoSuchStore);
         };
