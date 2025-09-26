@@ -11,11 +11,13 @@ jobs:
   ci:
     name: CI
     uses: credibil/pipeline/.github/workflows/ci.yaml@main
+    secrets: inherit
 
   publish:
     name: Publish
     needs: ci
     uses: credibil/pipeline/.github/workflows/publish.yaml@main
+    secrets: inherit
 
   package:
     name: Package
@@ -56,6 +58,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           build-args: |
             BIN=${{ inputs.bin }}
+          secrets: |
+            credibil=${{ secrets.CARGO_REGISTRIES_CREDIBIL_TOKEN }}
           tags: |
             ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ inputs.bin }}-${{ needs.publish.outputs.version }}
             ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ inputs.bin }}-latest

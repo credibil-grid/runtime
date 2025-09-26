@@ -9,6 +9,8 @@ RUN adduser --disabled-password --gecos "" --home "/nonexistent" \
 
 WORKDIR /app
 RUN \
+    --mount=type=secret,id=credibil,env=CARGO_REGISTRIES_CREDIBIL_TOKEN \
+    --mount=type=bind,src=.cargo,dst=.cargo \
     --mount=type=bind,src=Cargo.toml,dst=Cargo.toml \
     --mount=type=bind,src=Cargo.lock,dst=Cargo.lock \
     --mount=type=bind,src=src,dst=src \
